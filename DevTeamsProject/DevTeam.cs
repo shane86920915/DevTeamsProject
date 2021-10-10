@@ -11,12 +11,10 @@ namespace DevTeamsProject
         public int Id { get; set; }
         public List<Developer> listOfDevelopers { get; set; } = new List<Developer>();
         public string  TeamName { get; set; }
-
         public DevTeam()
         {
 
         }
-
         public DevTeam(int id, List<Developer> listofdevelopers, string teamname)
         {
             Id = id;

@@ -31,11 +31,6 @@ namespace DevTeamsProject
             Name = name; 
             HasPluralsight = haspluralsight;
             Devroles = devroles; 
-
 	    }
-
-
-
-
     }
 }

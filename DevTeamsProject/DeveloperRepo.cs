@@ -8,28 +8,22 @@ namespace DevTeamsProject
 {
     public class DeveloperRepo
     {
-        //simulate a database
         private readonly List<Developer> _developerDirectory = new List<Developer>();
 
-        //Developer Create
         public void AddDevToList(Developer developer)
         {
             _developerDirectory.Add(developer);
 
         }
-        //Developer Read
         public List<Developer> GetDevelopersList()
         {
             return _developerDirectory;
         }
 
-        //Developer Update
         public bool UpdateExistingDeveloper(int originalId, Developer newDeveloper)
         {
-            //find the content
             Developer oldDeveloper = GetDeveloperById(originalId);
 
-            //update the content
             if (oldDeveloper != null)
             {
                 oldDeveloper.Id = newDeveloper.Id;
@@ -43,11 +37,8 @@ namespace DevTeamsProject
                 return false;
             }
 
-
-
         }
 
-        //Developer Delete
         public bool RemoveDeveloperFromList(int originalId)
         {
             Developer developer = GetDeveloperById(originalId);
@@ -68,10 +59,8 @@ namespace DevTeamsProject
                 return false;
             }
 
-
         }
 
-        //Developer Helper (Get Developer by ID)
         public Developer GetDeveloperById(int id)
         {
             foreach (Developer Developer in _developerDirectory)
@@ -83,8 +72,6 @@ namespace DevTeamsProject
             }
             Console.WriteLine("There is no Dev with the ID of {0}", id);
             return null;
-
-
         }
     }
 }
